@@ -13,7 +13,7 @@ st.markdown("This tool looks at how tasks are connected in Jira to find hidden d
 def load_data():
     issue_meta = {}
     try:
-        with open("../data/issues.ndjson", "r", encoding="utf-8") as f:
+        with open("data/sample_issues.ndjson", "r", encoding="utf-8") as f:
             for line in f:
                 obj = json.loads(line)
                 key = obj.get("key")
@@ -39,7 +39,7 @@ def load_data():
         
     issue_counts = {}
     try:
-        with open("../data/links.ndjson", "r", encoding="utf-8") as f:
+        with open("data/sample_links.ndjson", "r", encoding="utf-8") as f:
             for line in f:
                 rec = json.loads(line)
                 link_type = rec["type"]
@@ -63,7 +63,7 @@ def load_data():
 def build_graph():
     G = nx.DiGraph()
     try:
-        with open("../data/links.ndjson", "r", encoding="utf-8") as f:
+        with open("data/sample_links.ndjson", "r", encoding="utf-8") as f:
             for line in f:
                 rec = json.loads(line)
                 link_type = rec["type"]
