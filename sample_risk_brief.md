@@ -9,8 +9,8 @@
 ### Executive Summary
 The portfolio demonstrates an elevated structural fragility due to deep dependency chains and late-stage scope expansion near Milestone 3. Overall velocity is steady, but critical path blockers have intensified in the last 7 days.
 
-### Top Risk Nodes
-These issues are structurally fragile and display high defect propagation potential or sit at the apex of deep blocker chains.
+### Top Active Risk Nodes
+These unresolved issues are structurally fragile and display high defect propagation potential or sit at the apex of deep blocker chains. Closed and resolved issues have been filtered out to ensure actionable focus.
 
 | Issue | Category | Exposure | Evidence Trail |
 |-------|----------|----------|----------------|
