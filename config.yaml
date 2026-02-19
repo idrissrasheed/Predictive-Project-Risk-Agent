@@ -1,0 +1,30 @@
+# Risk Scoring Configuration
+
+thresholds:
+  # 1. Dependency Depth & Blockers
+  # At what depth does a blocker trigger escalation?
+  dependency_depth_critical: 4
+  dependency_depth_warning: 2
+  blocked_days_critical: 5
+  blocked_days_warning: 3
+  
+  # 2. Scope Creep
+  # If a milestone is X days away, new tasks trigger warning
+  milestone_proximity_days: 14
+  new_task_ratio_warning: 0.05
+  new_task_ratio_critical: 0.10
+  
+  # 3. Rework & Quality
+  reopen_count_warning: 2
+  reopen_count_critical: 3
+  duplicate_density_warning: 0.08
+  
+weights:
+  # Weights used in calculating Structural Fragility Score
+  Duplicate: 2.0
+  Cloners: 2.0
+  Supercedes: 2.0
+  Issue_split: 1.5
+  Blocker: 2.0
+  Problem_Incident: 2.0
+  Reference: 0.1

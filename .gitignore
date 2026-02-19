@@ -1,0 +1,21 @@
+# Python ignores
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Project Data (Avoid uploading large raw JIRA dumps to GitHub)
+issues.ndjson
+links.ndjson
+issues.csv
+links.csv
+
+# Streamlit logs/cache
+.streamlit/
