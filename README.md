@@ -15,7 +15,7 @@ This dashboard goes beyond basic issue counting to highlight systemic project fr
 - **Predictive Schedule Slip Identification:** Penalizes closed issues (0.3x) to naturally bubble up open, high-risk critical path blockers.
 - **Automated Executive Summaries:** Generates a real-time weekly AI risk brief identifying the top delay and rework warnings with concrete recommendations.
 - **Evidence-Based Risk Reasoning:** Explains *why* a node is high-risk in plain English (e.g., "Blocks Others: 8 | Duplicated: 2").
-- **Visual Severity & Trends:** Scannable severity badges (🔴 High Risk, 🟠 Medium Risk) and simulated vector trends (⬆️ Getting worse).
+- **Visual Severity & Trends:** Scannable severity badges (🔴 High Risk, 🟠 Medium Risk) and simulated trends (Escalating).
 
 ## Pipeline Architecture
 
