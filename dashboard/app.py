@@ -3,6 +3,12 @@ import pandas as pd
 import json
 import networkx as nx
 import random
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_DIR = os.path.join(BASE_DIR, "..", "data")
+ISSUES_FILE = os.path.join(DATA_DIR, "issues.ndjson")
+LINKS_FILE = os.path.join(DATA_DIR, "links.ndjson")
 
 st.set_page_config(layout="wide", page_title="AI Risk Agent")
 
@@ -13,7 +19,7 @@ st.markdown("This tool looks at how tasks are connected in Jira to find hidden d
 def load_data():
     issue_meta = {}
     try:
-        with open("data/sample_issues.ndjson", "r", encoding="utf-8") as f:
+        with open(ISSUES_FILE, "r", encoding="utf-8") as f:
             for line in f:
                 obj = json.loads(line)
                 key = obj.get("key")
@@ -39,7 +45,7 @@ def load_data():
         
     issue_counts = {}
     try:
-        with open("data/sample_links.ndjson", "r", encoding="utf-8") as f:
+        with open(LINKS_FILE, "r", encoding="utf-8") as f:
             for line in f:
                 rec = json.loads(line)
                 link_type = rec["type"]
@@ -63,7 +69,7 @@ def load_data():
 def build_graph():
     G = nx.DiGraph()
     try:
-        with open("data/sample_links.ndjson", "r", encoding="utf-8") as f:
+        with open(LINKS_FILE, "r", encoding="utf-8") as f:
             for line in f:
                 rec = json.loads(line)
                 link_type = rec["type"]

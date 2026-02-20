@@ -11,9 +11,7 @@ ENV/
 env.bak/
 venv.bak/
 
-# Project Data (Avoid uploading large raw JIRA dumps to GitHub)
-issues.ndjson
-links.ndjson
+# Project Data
 issues.csv
 links.csv
 
