@@ -177,7 +177,7 @@ if not df.empty:
 
 # ---- DASHBOARD UI ----
 col1, col2, col3 = st.columns(3)
-col1.metric("Total Issues Tracked", len(issue_meta) if issue_meta else "N/A")
+col1.metric("Total Tasks Tracked", len(issue_meta) if issue_meta else "N/A")
 col2.metric("Known Dependencies", len(issue_counts))
 col3.metric("Highly At-Risk Issues (Score > 10)", len(df[df["Risk Index"] > 10]) if not df.empty else 0)
 
