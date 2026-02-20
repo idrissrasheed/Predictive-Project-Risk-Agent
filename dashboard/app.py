@@ -233,7 +233,7 @@ if not open_df.empty:
 
     st.info(f"""
     **Executive Summary:**
-    The project has a few specific areas of concern. The main bottleneck right now is **{top_issue['Issue']}**, which has a lowRisk Score of {top_issue['Risk Index']}. The main reason for this risk is its **{top_issue['Category']}**. 
+    The project has a few specific areas of concern. The main bottleneck right now is **{top_issue['Issue']}**, which has a low Risk Score of {top_issue['Risk Index']}. The main reason for this risk is its **{top_issue['Category']}**. 
     
     **Predictive Events:**
     * **Schedule Slip Risk:** `{top_issue['Issue']}` ({top_issue['Status']}) is acting as a {blocker_severity} critical path blocker with evidence: {top_issue['Evidence']}.
